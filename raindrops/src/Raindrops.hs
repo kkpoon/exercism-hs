@@ -9,7 +9,7 @@ convert n =
     else
         drops
     where
-        drops = intercalate "" [sound x | x <- [1..n], mod n x == 0]
+        drops = intercalate "" [sound x | x <- [3,5,7], mod n x == 0]
         sound n =
             case n of
                 3 -> "Pling"
