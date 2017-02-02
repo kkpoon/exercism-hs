@@ -5,11 +5,8 @@ import           Data.List (length, splitAt)
 
 areaCode :: String -> Maybe String
 areaCode num =
-    case number num of
-        Just n ->
-            Just (take 3 n)
-        _ ->
-            Nothing
+    -- <$> is infix of fmap
+    take 3 <$> number num
 
 number :: String -> Maybe String
 number num =
